@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLUE MOBILES</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <header>
+    <h1>BLUE MOBILES</h1>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Add / Edit Mobile</h2>
+      <form id="mobileForm">
+        <label>Mobile Model:
+          <input type="text" id="model" required>
+        </label>
+        <label>Manufacture Date:
+          <input type="date" id="manufactureDate" required>
+        </label>
+        <label>Buying Date:
+          <input type="date" id="buyingDate" required>
+        </label>
+        <label>Buyer Mobile Number:
+          <input type="tel" id="buyerNumber" required>
+        </label>
+        <label>Buying Price:
+          <input type="number" id="buyingPrice" required>
+        </label>
+        <label>Selling Date:
+          <input type="date" id="sellingDate">
+        </label>
+        <label>To Whom Sold (Mobile Number):
+          <input type="tel" id="soldToNumber">
+        </label>
+        <label>Selling Price:
+          <input type="number" id="sellingPrice">
+        </label>
+
+        <fieldset>
+          <legend>Tests</legend>
+          <label><input type="checkbox" id="speakerTest"> Speaker Test</label>
+          <label><input type="checkbox" id="microphoneTest"> Microphone Test</label>
+          <label><input type="checkbox" id="displayTest"> Display Test</label>
+          <label><input type="checkbox" id="batteryTest"> Battery Test</label>
+          <label><input type="checkbox" id="cameraTest"> Camera Test</label>
+        </fieldset>
+
+        <label>Upload Images (up to 5):
+          <input type="file" id="images" accept="image/*" multiple>
+        </label>
+
+        <button type="submit">Save</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Stored Mobiles</h2>
+      <table id="mobileList">
+        <thead>
+          <tr>
+            <th>Model</th><th>Buy Date</th><th>Buy Price</th><th>Sell Date</th><th>Sell Price</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
